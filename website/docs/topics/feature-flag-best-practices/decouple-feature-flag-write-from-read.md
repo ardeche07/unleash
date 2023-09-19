@@ -1,6 +1,10 @@
 ## 6. Horizontal scaling. Decouple writing and reading flags.
 
-Separating the reading and writing of feature flags into distinct APIs is a critical architectural decision for building a scalable and efficient feature flag system, particularly when considering horizontal scaling. This separation provides several benefits:
+Separating the reading and writing of feature flags into distinct APIs is a critical architectural decision for building a scalable and efficient feature flag system, particularly when considering horizontal scaling. 
+
+![horizontally-scale-feature-flags](https://github.com/ardeche07/unleash/assets/87366358/904c9660-b26f-4fc0-b832-705a46a22dff)
+
+This separation provides several benefits:
 
 1. **Improved Scalability**:
    - Reading and writing feature flags often have different patterns of usage and resource requirements. Separating these operations allows you to scale each aspect independently based on its specific needs. For example, you may need more read capacity during feature flag evaluations but require additional write capacity when updating flag configurations. With separate APIs, you can allocate resources accordingly, optimizing your system's overall performance.
